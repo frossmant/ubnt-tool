@@ -36,7 +36,7 @@ then
 fi
 
 clean
-echo "Downloading version ${VERSION_LATEST} (installed version is ${VERSION_INSTALLED}"
+echo "Downloading version ${VERSION_LATEST} (installed version is ${VERSION_INSTALLED})"
 unifi_download ${VERSION_LATEST}
 echo "Stopping UniFi Controller and upgrading software"
 unifi_upgrade
