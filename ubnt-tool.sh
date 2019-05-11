@@ -2,7 +2,7 @@
 
 VERSION_URL="https://help.ubnt.com/hc/en-us/articles/360008240754#1"
 VERSION_INSTALLED=`cat /opt/UniFi/data/db/version`
-VERSION_LATEST=`curl --silent ${VERSION_URL}|grep -w Stable|grep -v Candidate|grep -v LTS|grep http|sed 's/<[^>]\+>//g'|head -1`
+VERSION_LATEST=`curl --silent ${VERSION_URL}|grep -w Stable|grep -v Candidate|grep -v LTS|grep http|grep -wv "5.6.42"|sed 's/<[^>]\+>//g'|head -1`
 
 function clean()
 {
